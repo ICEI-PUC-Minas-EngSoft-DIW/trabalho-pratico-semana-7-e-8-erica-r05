@@ -1,13 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Meu Portifolio</title>
 </head>
 <body>
-    <h1>Olá mundo</h1>
+
+    <header class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#">
+                <h1>ArtShare</h1>
+            </a>
+            <div class="d-flex align-items-center me-auto search-bar">
+                <input type="text" class="form-control" placeholder="Pesquisar artistas, portifólios, obras...">
+                <button class="btn btn-primary">Buscar</button>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-primary">Publicar uma nova arte</button>
+                <button class="btn btn-primary">Painel do artista</button>
+                <button class="btn btn-primary">Minha coleção</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid mt-5 pt-3">
+        <div class="row">
+            
+            <nav class="col-md-3 col-lg-2 sidebar">
+                <ul class="nav flex-column gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portifólio principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Comunidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Artistas seguidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Histórico</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Configurações</a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="col-md-9 col-lg-10">
+                <section class="section">
+                    <div class="welcome-message">
+                        <h2>Bem-vindo de volta, Artista!</h2>
+                        <p>Explore novas obras, conecte-se com outros artistas e compartilhe sua criatividade.</p>
+                    </div>
+                    <div class="publish-section">
+                        <h3>Publique seu pensamento</h3>
+                        <form id="publish-form">
+                            <div class="mb-3">
+                                <textarea id="publish-text" class="form-control" placeholder="Compartilhe uma ideia, uma reflexão..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Publicar</button>
+                        </form>
+                    </div>
+                </section>
+                <section class="section">
+                    <h2>Minhas ultimas Obras</h2>
+                    <div class="grid-container row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/recortes_do_fundo_do_mar.jpg" alt="Recortes do fundo do mar">
+                                <div class="item-info">
+                                    <h3>Recortes do fundo do mar</h3>
+                                    <p>Breve representação da beleza marinha</p>
+                                    <p>Artista: Erica Regina</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/reina.jpg" alt="A beleza de Reina">
+                                <div class="item-info">
+                                    <h3>A beleza de Reina</h3>
+                                    <p>Uma representação da serenidade atrelada a autoridade </p>
+                                    <p>Artista:Erica Regina</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/Celina.jpg" alt="A beleza de Celina">
+                                <div class="item-info">
+                                    <h3>A beleza de Celina</h3>
+                                    <p>Celina é a representação do que eu acredito estar mais proximo da beleza dos anjos</p>
+                                    <p>Artista:Erica Regina</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/apenas_um_sketch_comum.jpg" alt="Apenas um sketch comum">
+                                <div class="item-info">
+                                    <h3>Apenas um sketch comum</h3>
+                                    <p>Sem significado importante</p>
+                                    <p>Artista: Erica Regina</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/eco_da_dor.jpg" alt="O eco da dor">
+                                <div class="item-info">
+                                    <h3>O eco da dor</h3>
+                                    <p>A dor representada é apenas o reflexo (eco) de algo além do que está sendo mostrado</p>
+                                    <p>Artista: Erica Regina</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <h2>Meus albuns musicais favoritos</h2>
+                    <div class="grid-container row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/hard_to_imagine_the_neighbourhood_ever_changing.jpg" alt="HTITNBHDEC">
+                                <div class="item-info">
+                                    <h3>Hard to imagine th neighbourhood ever changing</h3>
+                                    <p>The Neibourhood</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/nevermind - Nirvana.jpg" alt="Nevermind">
+                                <div class="item-info">
+                                    <h3>Nevermind</h3>
+                                    <p>Nirvana</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/freudian.jpg" alt="freudian">
+                                <div class="item-info">
+                                    <h3>Freudian</h3>
+                                    <p>Daniel Cesar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/djavan_ao_vivo_1999.jpg" alt="Djavan ao vivo 1999">
+                                <div class="item-info">
+                                    <h3>Djavan ao vivo 1999</h3>
+                                    <p>Djavan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/damn_KendrickLamar.jpg" alt="Damn">
+                                <div class="item-info">
+                                    <h3>Damn</h3>
+                                    <p>Kendrick Lamar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>Recomendações da comunidade</h2>
+                    <div class="grid-container row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/_operários_tarsila_do_amaral.jpg" alt="Operários - Tarsila do Amaral">
+                                <article class="item-info">
+                                    <h3>Operários</h3>
+                                    <p>A pintura Operários...</p>
+                                    <p>Artista:Tarsila do Amaral</p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/abaporu_tarsila_do_amaral.jpg" alt="Abaporu - Tarsila do Amaral">
+                                <article class="item-info">
+                                    <h3>Abaporu</h3>
+                                    <p>A obra Abaporu...</p>
+                                    <p>Artista:Tarcila do Amaral</p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/as_damas_davignon_de_pablo_picasso.jpg" alt="As Damas d'Avignon - Pablo Picasso">
+                                <article class="item-info">
+                                    <h3>As Damas d'Avignon</h3>
+                                    <p>A obra As Damas d'Avignon...</p>
+                                    <p>Artista: Pablo Picasso</p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/Impresión_sol_naciente - Monet.jpg" alt="Impresión, sol naciente - Claude Monet">
+                                <article class="item-info">
+                                    <h3>Impresión, sol naciente</h3>
+                                    <p>A obra Impressão, sol nascente...</p>
+                                    <p>Artista:Claude Monet</p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item-card">
+                                <img src="images/Starry_night_over_the_Rhone.jpg" alt="Starry night over the Rhone - Vincent van Gogh">
+                                <article class="item-info">
+                                    <h3>Starry night over the Rhone</h3>
+                                    <p>A obra Noite Estrelada sobre o Ródano...</p>
+                                    <p>Artista:Vincent Van Gogh</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <footer class="footer">
+        <p>&copy; 2025 ArtShare. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
